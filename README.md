@@ -1,6 +1,19 @@
 If you're here to build Restored.exe so you can play as Knuckles please be aware that CMake will not let you build this project on Windows. Though it should hopefully work on Linux or MacOSX.
-If you're on Windows, run RSDKv3.sln in Visual Studio 2022 after building Statics of the following:
 
+1. Install Visual Studio, clone this Repo, and grab the Windows Dependencies at once here: https://www.mediafire.com/file/mrzw3lonj79mivt/windows.rar/file
+
+2. Extract them into your Dependencies folder from the Cloned Repo and then run RSDKv3.sln
+
+3. Click the Build Menu at the top of the screen then click Configuration Manager...
+
+4. Change the Active Solution Configuration from Debug to Release
+
+5. On the right hand side of the window, Right Click RSDKv3-OGL and click Build
+
+6. Find your new .exe in the newly created Build folder
+
+==Old Instructions==
+If you're on Windows, run RSDKv3.sln in Visual Studio 2022 after building Statics of the following:
 SDL2: https://www.libsdl.org/download-2.0.php
 download the appropriate development library for your compiler and unzip it in "dependecies/windows/SDL2/"
 

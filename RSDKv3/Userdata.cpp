@@ -346,7 +346,6 @@ void InitUserdata()
 #if RETRO_PLATFORM == RETRO_WINDOWS
         ini.SetBool("Dev", "UseSteamDir", Engine.useSteamDir = true);
 #endif
-        ini.SetBool("Dev", "UseHQModes", Engine.useHQModes = false);
         sprintf(Engine.dataFile, "%s", "Data.rsdk");
         ini.SetString("Dev", "DataFile", Engine.dataFile);
 
@@ -458,8 +457,6 @@ void InitUserdata()
         if (!ini.GetBool("Dev", "UseSteamDir", &Engine.useSteamDir))
             Engine.useSteamDir = false;
 #endif
-        if (!ini.GetBool("Dev", "UseHQModes", &Engine.useHQModes))
-            Engine.useHQModes = true;
 
         Engine.startList_Game  = Engine.startList;
         Engine.startStage_Game = Engine.startStage;
@@ -765,10 +762,6 @@ void WriteSettings()
     ini.SetComment("Dev", "SDComment", "Determines if the game will try to use the steam directory for the game if it can locate it");
     ini.SetBool("Dev", "UseSteamDir", Engine.useSteamDir);
 #endif
-    ini.SetComment(
-        "Dev", "UseHQComment",
-        "Determines if applicable rendering modes (such as 3D floor from special stages) will render in \"High Quality\" mode or standard mode - Note: Disables Linear Scaling");
-    ini.SetBool("Dev", "UseHQModes", Engine.useHQModes);
 
     ini.SetComment("Dev", "DataFileComment", "Determines what RSDK file will be loaded");
     ini.SetString("Dev", "DataFile", Engine.dataFile);

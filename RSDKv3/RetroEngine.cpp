@@ -1234,7 +1234,8 @@ void RetroEngine::Callback(int callbackID)
         case CALLBACK_TRIAL_ENDED:
             if (bytecodeMode == BYTECODE_PC) {
 #if WINAPI_FAMILY
-                ShellExecute(0, 0, L"https://www.speedrun.com/scd_restored", 0, 0 , SW_SHOW );
+                std::string Leaderboards_URL = "https://www.speedrun.com/scd_restored";
+                ShellExecuteA(0, 0, Leaderboards_URL.c_str(), 0, 0 , SW_SHOW);
 				
 				SDL_MinimizeWindow(Engine.window);
 #endif

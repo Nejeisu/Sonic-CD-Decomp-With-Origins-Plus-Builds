@@ -370,7 +370,6 @@ void InitUserdata()
         ini.SetInteger("Window", "DimLimit", Engine.dimLimit = 300);
         Engine.dimLimit *= Engine.refreshRate;
         renderType = RENDER_SW;
-        ini.SetBool("Window", "HardwareRenderer", false);
 
         ini.SetFloat("Audio", "BGMVolume", bgmVolume / (float)MAX_VOLUME);
         ini.SetFloat("Audio", "SFXVolume", sfxVolume / (float)MAX_VOLUME);
@@ -503,11 +502,6 @@ void InitUserdata()
             Engine.dimLimit = 300; // 5 mins
         if (Engine.dimLimit >= 0)
             Engine.dimLimit *= Engine.refreshRate;
-        bool hwRender = false;
-        ini.GetBool("Window", "HardwareRenderer", &hwRender);
-        if (hwRender)
-            renderType = RENDER_HW;
-        else
             renderType = RENDER_SW;
         Engine.gameRenderType = Engine.gameRenderTypes[renderType];
 
@@ -795,8 +789,6 @@ void WriteSettings()
     ini.SetInteger("Window", "RefreshRate", Engine.refreshRate);
     ini.SetComment("Window", "DLComment", "Determines the dim timer in seconds, set to -1 to disable dimming");
     ini.SetInteger("Window", "DimLimit", Engine.dimLimit >= 0 ? Engine.dimLimit / Engine.refreshRate : -1);
-    ini.SetComment("Window", "HWComment", "Determines the game uses hardware rendering (like mobile) or software rendering (like PC)");
-    ini.SetBool("Window", "HardwareRenderer", renderType == RENDER_HW);
 
     ini.SetFloat("Audio", "BGMVolume", bgmVolume / (float)MAX_VOLUME);
     ini.SetFloat("Audio", "SFXVolume", sfxVolume / (float)MAX_VOLUME);

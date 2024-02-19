@@ -1,5 +1,5 @@
 Good news! CMake works now on all platforms!
-
+Follow this video's instructions and best of luck: https://www.youtube.com/watch?v=CO7GpbWuzDI
 
 ==Old Instructions==
 

@@ -466,7 +466,7 @@ public:
     char startSceneID[0x10];
 
     bool showPaletteOverlay = false;
-    bool useHQModes         = true;
+    bool useHQModes         = false;
 #endif
 
     void Init();

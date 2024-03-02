@@ -188,6 +188,7 @@ void ProcessStageSelect()
 #endif
                     activeStageList   = 0;
                     stageMode         = STAGEMODE_LOAD;
+                    debugMode         = 0;
                     Engine.gameMode   = ENGINE_MAINGAME;
                     stageListPosition = 0;
                 }

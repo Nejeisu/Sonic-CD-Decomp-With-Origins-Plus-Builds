@@ -161,7 +161,7 @@ jobs:
           ls ./dependencies/all
       - name: Build RSDKv3
         run: |
-          make RETRO_DISABLE_PLUS=0
+          make RETRO_DISABLE_PLUS=1
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:

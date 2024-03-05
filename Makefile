@@ -1,5 +1,5 @@
 RETRO_FORCE_CASE_INSENSITIVE ?= 1
-RETRO_DISABLE_PLUS           ?= 0
+RETRO_DISABLE_PLUS           ?= 1
 RETRO_USE_HW_RENDER          ?= 1
 
 ifeq ($(STATIC),1)

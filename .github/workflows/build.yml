@@ -198,7 +198,7 @@ SDL2-x64:
         with:
           name: SDL2-x64
           path: artifacts
-  v3-linux:
+v3-linux:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -212,7 +212,7 @@ SDL2-x64:
           ls ./dependencies/all
       - name: Build RSDKv3
         run: |
-          make RETRO_DISABLE_PLUS=1
+          make RETRO_DISABLE_PLUS=0
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
